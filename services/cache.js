@@ -3,7 +3,7 @@ const redis = require('redis');
 const util = require('util');
 const keys = require('../config/keys.js')
 
-const client = redis.createClient(redisUrl);
+const client = redis.createClient(keys.redisUrl);
 //exec prototype returns a promise, so we need to promisify redis get function
 //client.get = util.promisify(client.get);
 client.hget = util.promisify(client.hget);
