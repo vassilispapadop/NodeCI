@@ -11,6 +11,8 @@ require('./models/Team');
 require('./services/passport');
 require('./services/cache');
 
+//instruct to use NodeJs global promise object
+//default doesn't do it
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
@@ -30,7 +32,7 @@ require('./routes/authRoutes')(app);
 require('./routes/blogRoutes')(app);
 require('./routes/teamRoutes')(app);
 
-if (['production'].includes(process.env.NODE_ENV)) {
+if (['production', 'ci'].includes(process.env.NODE_ENV)) {
   app.use(express.static('client/build'));
 
   const path = require('path');

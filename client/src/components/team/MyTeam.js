@@ -4,7 +4,7 @@ const MyTeam = () => {
     return (
         <div style={{ textAlign: 'center' }}>
           <h1>
-            My Teams!
+            My Team
           </h1>
           Create your own team
         </div>

@@ -9,7 +9,6 @@ module.exports = app => {
         const teams = await Team
             .find({_user: req.user.id})
             .cache({key: req.user.id});
-        console.log('/api/teams route');
         res.send(teams);    
 
     })
