@@ -42,8 +42,8 @@ describe.only('When logged in', async () => {
             const title = await page.GetContentsOf('.card-title');
             const content = await page.GetContentsOf('p');
 
-            expect(title).toEqual('My title');
-            expect(content).toEqual('My content');
+            expect(title).toEqual(' My title');
+            expect(content).toEqual(' My content');
         });
     });
 
