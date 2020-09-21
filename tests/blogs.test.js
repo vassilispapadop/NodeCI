@@ -43,7 +43,7 @@ describe.only('When logged in', async () => {
             const content = await page.GetContentsOf('p');
 
             expect(title).toEqual(' My title');
-            expect(content).toEqual(' My content');
+            expect(content).toEqual('My content');
         });
     });
 
