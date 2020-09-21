@@ -25,8 +25,8 @@ describe.only('When logged in', async () => {
     
     describe('And using valid inputs', async () => {
         beforeEach(async () => {
-            const title = await page.type('.title input', ' my title');
-            const content = await page.type('.content input', 'my content');
+            const title = await page.type('.title input', ' My title');
+            const content = await page.type('.content input', 'My content');
             await page.click('form button');
         });
 
